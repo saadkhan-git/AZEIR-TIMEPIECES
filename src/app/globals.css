@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050505;
+  --foreground: #f4ebd0;
+  --gold: #d4af37;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-outfit), sans-serif;
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center border border-gold bg-gold px-8 py-3 text-xs uppercase tracking-[0.28em] text-ink transition-all duration-500 ease-out;
+  }
+
+  .btn-gold:hover {
+    @apply bg-transparent text-gold shadow-[0_0_24px_rgba(212,175,55,0.28)];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center border border-gold/40 px-8 py-3 text-xs uppercase tracking-[0.28em] text-gold transition-all duration-500 ease-out;
+  }
+
+  .btn-ghost:hover {
+    @apply border-gold bg-gold/10 text-ivory shadow-[0_0_24px_rgba(212,175,55,0.18)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
